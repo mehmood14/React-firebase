@@ -1,0 +1,70 @@
+.backgroundlogin {
+  background-image: url(https://source.unsplash.com/random/800x600);
+  background-size: cover;
+  height: 100vh;
+  background-image: linear-gradient(
+    rgb(65, 65, 65),
+    rgb(0, 0, 0, 0.4),
+    rgb(65, 65, 65)
+  );
+  background-image: linear-gradient(
+    to top,
+    rgb(65, 65, 65),
+    rgb(0, 0, 0, 0.4),
+    rgb(65, 65, 65)
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formlogin {
+  color: white;
+  width: 17%;
+  max-width: 260px;
+  padding-bottom: 10px;
+  border: 1px solid gray;
+  padding: 25px;
+  background-color: rgb(0, 0, 0, 0.5);
+  border-radius: 8px;
+  font-family: GothamRounded;
+}
+
+.loginField {
+  background-color: rgb(249, 252, 255);
+  color: black;
+  padding: 8px 30px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+.btndiv {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.buttonLogin {
+  color: white;
+  padding: 12px 15px;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0, 0.1);
+  border: 1px solid #555555;
+  font-family: GothamRounded;
+}
+
+.buttonLogin:hover {
+  background-color: #555555;
+}
+
+.fieldDiv {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import fire from "./Config/fire";
+import Login from "./Container/Login";
+import Home from "./Container/Home";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      user: {},
+    };
+  }
+
+  componentDidMount() {
+    this.authlistner();
+  }
+
+  authlistner() {
+    fire.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({ user });
+      } else {
+        this.setState({ user: null });
+      }
+    });
+  }
+
+  render() {
+    return (
+      <>
+        <div className="homewrap">
+          {this.state.user ? (
+            <Router>
+              <Route path="/" component={Home} />
+            </Router>
+          ) : (
+            <Router>
+              <Route exact path="/" component={Login} />
+            </Router>
+          )}
+        </div>
+      </>
+    );
+  }
 }
-
-export default App;

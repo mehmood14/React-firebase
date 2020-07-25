@@ -1,0 +1,81 @@
+.intododiv {
+  width: 40%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+  background-color: rgb(249, 252, 255);
+  padding: 10px;
+  box-shadow: -10px 14px 50px 7px;
+  margin-top: 20px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: gray;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(78, 78, 78);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(41, 41, 41);
+}
+
+.btnsaveupdate {
+  background-color: rgb(0, 0, 0, 0.1);
+  color: aliceblue;
+  border: 1px solid aliceblue;
+  padding: 5px 12px 8px;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 5px;
+  font-family: GothamRounded;
+}
+
+.btndelete,
+.btnedit {
+  background-color: rgb(0, 0, 0, 0.2);
+  color: black;
+  border: 1px solid #ffffff;
+  padding: 8px 12px;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: GothamRounded;
+}
+
+.btndelete:hover {
+  background-color: #fc5f5f;
+}
+.btnedit:hover {
+  background-color: #7fe676;
+}
+.btnsaveupdate:hover {
+  background-color: #7d9bff;
+  color: white;
+}
+
+.inputfield {
+  background-color: rgb(249, 252, 255);
+  color: black;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-top: 20%;
+  border-radius: 5px;
+  padding: 8px;
+}
