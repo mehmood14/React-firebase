@@ -3,6 +3,7 @@ import fire from "../Config/fire";
 import "./Login.css";
 import swal from "sweetalert";
 import { Link } from "react-router-dom";
+import Footer from "../Components/Footer";
 
 class Login extends Component {
   constructor(props) {
@@ -49,16 +50,37 @@ class Login extends Component {
                 console.log(error);
               });
           } else {
-            swal("Password must be 8 digits long");
+            swal({
+              title: "Warning!",
+              text: "Password must be 8 digits long",
+              icon: "warning",
+              button: "OK",
+            });
           }
         } else {
-          swal("Password not entered");
+          swal({
+            title: "Warning!",
+            text: "Password not entered",
+            icon: "warning",
+            button: "OK",
+          });
         }
       } else {
         swal("Invalid email format");
+        swal({
+          title: "Warning!",
+          text: "Invalid email format",
+          icon: "warning",
+          button: "OK",
+        });
       }
     } else {
-      swal("Email not entered");
+      swal({
+        title: "Warning!!",
+        text: "Email not entered",
+        icon: "warning",
+        button: "OK",
+      });
     }
   }
 
@@ -86,7 +108,7 @@ class Login extends Component {
               .then((u) => {})
               .then((u) => {
                 swal({
-                  title: "Good job!",
+                  title: "Congratulation!",
                   text: "You are registered",
                   icon: "success",
                   button: "OK",
@@ -97,16 +119,37 @@ class Login extends Component {
                 console.log(error);
               });
           } else {
-            swal("Password must be 8 digits long");
+            swal({
+              title: "Warning!",
+              text: "Password must be 8 digits long",
+              icon: "warning",
+              button: "OK",
+            });
           }
         } else {
-          swal("Password not entered");
+          swal({
+            title: "Warning!",
+            text: "Password not entered",
+            icon: "warning",
+            button: "OK",
+          });
         }
       } else {
         swal("Invalid email format");
+        swal({
+          title: "Warning!",
+          text: "Invalid email format",
+          icon: "warning",
+          button: "OK",
+        });
       }
     } else {
-      swal("Email not entered");
+      swal({
+        title: "Warning!!",
+        text: "Email not entered",
+        icon: "warning",
+        button: "OK",
+      });
     }
   }
   render() {
@@ -150,6 +193,7 @@ class Login extends Component {
             </Link>
           </div>
         </form>
+        <Footer />
       </div>
     );
   }

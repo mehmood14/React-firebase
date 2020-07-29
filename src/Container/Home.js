@@ -3,6 +3,7 @@ import fire from "../Config/fire";
 import "./Home.css";
 import Todo from "../Components/Todo";
 import { Link } from "react-router-dom";
+import Footer from "../Components/Footer";
 
 class Home extends Component {
   constructor(props) {
@@ -28,6 +29,7 @@ class Home extends Component {
         <div className="tododiv">
           <Todo />
         </div>
+        <Footer />
       </>
     );
   }
